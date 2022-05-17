@@ -70,8 +70,8 @@ def decide_move(board: list, player_id: str) -> list:
     Decides next move to make.
     """
     oponente = "0"
-    if player_id is "0":
-        rival = "X"
+    if player_id == "0":
+        oponente = "X"
 
 #Estrategia de ataque 
 
@@ -109,6 +109,30 @@ def decide_move(board: list, player_id: str) -> list:
         return [2,0]
     if board [0][2] == player_id and board [1][1] == player_id and board [2][0] == "-":
         return [2,0]
+    if board [0][2] == player_id and board [1][1] == player_id and board [2][0] == "-":
+        return [2,0]
+    if board [0][0] == player_id and board [0][2] == player_id and board [0][1] == "-":
+        return [0,1]
+    if board [0][2] == player_id and board [0][0] == player_id and board [0][1] == "-":
+        return [0,1]
+    if board [1][0] == player_id and board [1][2] == player_id and board [1][1] == "-":
+        return [1,1]
+    if board [1][2] == player_id and board [1][0] == player_id and board [1][1] == "-":
+        return [1,1]
+    if board [2][0] == player_id and board [2][2] == player_id and board [2][1] == "-":
+        return [2,1]
+    if board [2][2] == player_id and board [2][0] == player_id and board [2][1] == "-":
+        return [2,1]
+    if board [2][0] == player_id and board [0][2] == player_id and board [1][1] == "-":
+        return [1,1]
+    if board [0][2] == player_id and board [2][0] == player_id and board [1][1] == "-":
+        return [1,1]
+
+#Estrategia de bloqueo 
+
+    
+    
+    
 
 
 
